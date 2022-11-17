@@ -1,6 +1,8 @@
 const loginButton = document.getElementById('login');
 const submitBtn = document.getElementById('submit-btn');
 const agreementTerms = document.getElementById('agreement');
+const textArea = document.querySelector('textarea');
+const spanCounter = document.getElementById('counter');
 
 const validate = (email, password) => {
   const emailInput = document.getElementById('email-input');
@@ -23,6 +25,19 @@ const checkTerms = () => {
   }
 };
 
+const countCharacters = (event) => {
+  const keyPressed = event.key.toLowerCase();
+  const acceptKeys = 'abcdefghijklmnopqrstuvwxyz1234567890';
+  let count = Number(spanCounter.innerText);
+
+  if (keyPressed === 'backspace' && count < 500 && textArea.value !== '') {
+    count += 1;
+  } else if (keyPressed !== 'backspace' && acceptKeys.includes(keyPressed)) {
+    count -= 1;
+  }
+  spanCounter.innerText = String(count);
+};
+
 loginButton.addEventListener('click', (event) => {
   event.preventDefault();
   validate('tryber@teste.com', '123456');
@@ -34,6 +49,6 @@ submitBtn.addEventListener('click', (event) => {
 
 agreementTerms.addEventListener('change', checkTerms);
 
-window.addEventListener('keyup', (event) => {});
+textArea.addEventListener('keydown', countCharacters);
 
 checkTerms();
