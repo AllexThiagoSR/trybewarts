@@ -6,11 +6,11 @@
   display: flex;
 }
 
-.flex-container form {
+.trybewarts-login.flex-container {
   justify-content: space-around;
   align-items: center;
 }
 
-.flex-container header {
+.header.flex-container {
   justify-content: space-between;
 }
