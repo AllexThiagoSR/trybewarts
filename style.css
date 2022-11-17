@@ -1,4 +1,16 @@
 .header {
-  display: flex;
   background-color: rgb(50, 167, 145);
+}
+
+.flex-container {
+  display: flex;
+}
+
+form.flex-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.flex-container {
+  justify-content: space-between;
 }
