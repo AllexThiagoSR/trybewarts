@@ -1,4 +1,5 @@
 const loginButton = document.getElementById('login');
+const submitBtn = document.getElementById('submit-btn');
 
 const validate = (email, password) => {
   const emailInput = document.getElementById('email-input');
@@ -16,4 +17,8 @@ const validate = (email, password) => {
 loginButton.addEventListener('click', (event) => {
   event.preventDefault();
   validate('tryber@teste.com', '123456');
+});
+
+submitBtn.addEventListener('click', (event) => {
+  event.preventDefault();
 });
