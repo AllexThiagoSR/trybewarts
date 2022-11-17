@@ -21,12 +21,25 @@
 
   <main id="main-container">
     <form action="" id="evaluation-form">
-      <label for="input-name">Nome: </label>
-      <input type="text" placeholder="Nome" name="userName" id="input-name">
+      <section>
+        <label for="input-name">Nome:
+        <input type="text" placeholder="Nome" name="userName" id="input-name" size="12px"> </label>
 
-      <label for="input-lastname">Sobrenome: </label>
-      <input type="text" placeholder="Sobrenome" name="userLastName" id="input-lastname">
+        <label for="input-lastname">Sobrenome:
+        <input type="text" placeholder="Sobrenome" name="userLastName" id="input-lastname" size="15px"> </label>
+      </section>
+      <section>
+        <label for="input-email">Email:
+        <input type="email" placeholder="Email" name="userEmail" id="input-email" size="16px"> </label>
 
+        <label for="house">Escolha sua casa:
+        <select name="house" id="house">
+          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+          <option value="Corvinode" id="corvinode-house">Corvinode</option>
+          <option value="Pytherina" id="pytherina-house">Pytherina</option>
+        </select> </label>
+      </section>
       <label for="input-email">Email: </label>
       <input type="email" placeholder="Email" name="userEmail" id="input-email">
 

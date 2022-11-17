@@ -25,7 +25,6 @@
 }
 
 #main-container {
-  border: black 2px solid;
   display: flex;
   margin: 2px;
 }
@@ -33,10 +32,26 @@
 #evaluation-form {
   display: flex;
   flex-direction: column;
-  margin: 2px;
+  margin: 1%;
   width: 675px;
 }
 
 #trybewarts-forms-logo {
   height: 500px;
+}
+
+#input-name {
+  margin: 1%;
+}
+
+#input-lastname {
+  margin: 1%;
+}
+
+#input-email {
+  margin: 1%;
+}
+
+#house {
+  margin: 1%;
 }
