@@ -22,19 +22,15 @@
   <main id="main-container">
     <form action="" id="evaluation-form">
 
-      <section>
-        <label for="input-name">
-        <input type="text" placeholder="Nome" name="userName" id="input-name" size="12px"> </label>
-
-        <label for="input-lastname">
-        <input type="text" placeholder="Sobrenome" name="userLastName" id="input-lastname" size="15px"> </label>
+      <section id="section-one">
+        <input type="text" placeholder="Nome" name="userName" id="input-name">
+        <input type="text" placeholder="Sobrenome" name="userLastName" id="input-lastname">
       </section>
 
-      <section>
-        <label for="input-email">
-        <input type="email" placeholder="Email" name="userEmail" id="input-email" size="16px"> </label>
+      <section id="section-two">
+        <input type="email" placeholder="Email" name="userEmail" id="input-email">
 
-        <div>
+        <div id="houseContainer">
           <label for="house">Escolha sua casa:
           <select name="house" id="house">
             <option value="Gitnória" id="gitnoria-house">Gitnória</option>
@@ -62,28 +58,40 @@
         <div id="toLearn">
           <label for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
           <label for="hoFs">
-            <input type="checkbox" name="HoFs" value="HoFs" id="hoFs" class="subject"> HoFs
+            <input type="checkbox" name="HoFs" value="HoFs" id="hoFs" class="subject">HoFs
           </label>
           <label for="jest">
-            <input type="checkbox" name="Jest" value="Jest" id="jest" class="subject"> Jest
+            <input type="checkbox" name="Jest" value="Jest" id="jest" class="subject">Jest
           </label>
           <label for="promises">
-            <input type="checkbox" name="Promises" value="Promises" id="promises" class="subject"> Promises
+            <input type="checkbox" name="Promises" value="Promises" id="promises" class="subject">Promises
           </label>
           <label for="react">
-            <input type="checkbox" name="React" value="React" id="react" class="subject"> React
+            <input type="checkbox" name="React" value="React" id="react" class="subject">React
           </label>
           <label for="sql">
-            <input type="checkbox" name="SQL" value="SQL" id="sql" class="subject"> SQL
+            <input type="checkbox" name="SQL" value="SQL" id="sql" class="subject">SQL
           </label>
           <label for="python">
-            <input type="checkbox" name="Python" value="Python" id="python" class="subject"> Python
+            <input type="checkbox" name="Python" value="Python" id="python" class="subject">Python
           </label>
         </div>
       </section>
 
-      <label for="input-email">Email: </label>
-      <input type="email" placeholder="Email" name="userEmail" id="input-email">
+      <section id="section-four">
+        <label for="" id="evaluationLabel">Como você avalia a Trybewarts?
+          <input type="radio" name="radio buttons" value="1" class="evaluationRadio">1
+          <input type="radio" name="radio buttons" value="2" class="evaluationRadio">2
+          <input type="radio" name="radio buttons" value="3" class="evaluationRadio">3
+          <input type="radio" name="radio buttons" value="4" class="evaluationRadio">4
+          <input type="radio" name="radio buttons" value="5" class="evaluationRadio">5
+          <input type="radio" name="radio buttons" value="6" class="evaluationRadio">6
+          <input type="radio" name="radio buttons" value="7" class="evaluationRadio">7
+          <input type="radio" name="radio buttons" value="8" class="evaluationRadio">8
+          <input type="radio" name="radio buttons" value="9" class="evaluationRadio">9
+          <input type="radio" name="radio buttons" value="10" class="evaluationRadio">10
+        </label>
+      </section>
 
       <div id="text-and-count">
         <textarea cols="30" rows="10" maxlength="500"></textarea>
