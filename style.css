@@ -24,3 +24,13 @@
 .trybewarts-header-logo {
   width: 90px;
 }
+
+#main-container {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  flex-direction: column;
+  width: 675px;
+}
