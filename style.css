@@ -30,7 +30,7 @@
 
 #main-container {
   display: flex;
-  margin: 2px;
+  margin: 1%;
 }
 
 #evaluation-form {
@@ -45,41 +45,78 @@
   height: 500px;
 }
 
+#section-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 98%;
+}
+
 #input-name {
+  display: flex;
   margin: 1%;
-  width: 45%;
+  width: 48%;
 }
 
 #input-lastname {
+  display: flex;
   margin: 1%;
-  width: 45%
+  width: 48%
+}
+
+#section-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 98%;
 }
 
 #input-email {
+  display: flex;
   margin: 1%;
-  width: 45%
+  width: 48%
 }
 
-#house {
+#houseContainer {
+  display: flex;
   margin: 1%;
+  width: 48%;
 }
 
 #section-three {
+  border-top: solid rgb(211, 206, 206) 2px;
+  border-bottom: solid rgb(211, 206, 206) 2px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding: 5%;
+  margin: 5%;
 }
 
 #family-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 2%;
+  width: 40%;
+  margin: 1%;
 }
 
 #toLearn {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 50%;
-  margin: 2%;
+  width: 60%;
+  margin: 1%;
+}
+
+#section-four {
+  display: flex;
+  justify-content: center;
+  margin: 1%;
+  width: 98%;
+}
+
+#evaluationLabel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
