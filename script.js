@@ -30,9 +30,10 @@ loginButton.addEventListener('click', (event) => {
 
 submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  console.log([submitBtn]);
 });
 
 agreementTerms.addEventListener('change', checkTerms);
+
+window.addEventListener('keyup', (event) => {});
 
 checkTerms();
