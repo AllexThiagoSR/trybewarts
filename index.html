@@ -21,37 +21,67 @@
 
   <main id="main-container">
     <form action="" id="evaluation-form">
+
       <section>
-        <label for="input-name">Nome:
+        <label for="input-name">
         <input type="text" placeholder="Nome" name="userName" id="input-name" size="12px"> </label>
 
-        <label for="input-lastname">Sobrenome:
+        <label for="input-lastname">
         <input type="text" placeholder="Sobrenome" name="userLastName" id="input-lastname" size="15px"> </label>
       </section>
+
       <section>
-        <label for="input-email">Email:
+        <label for="input-email">
         <input type="email" placeholder="Email" name="userEmail" id="input-email" size="16px"> </label>
 
-        <label for="house">Escolha sua casa:
-        <select name="house" id="house">
-          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-          <option value="Corvinode" id="corvinode-house">Corvinode</option>
-          <option value="Pytherina" id="pytherina-house">Pytherina</option>
-        </select></label>
+        <div>
+          <label for="house">Escolha sua casa:
+          <select name="house" id="house">
+            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+            <option value="Corvinode" id="corvinode-house">Corvinode</option>
+            <option value="Pytherina" id="pytherina-house">Pytherina</option>
+          </select></label>
+        </div>
       </section>
 
-      <label for="" id="label-family">Qual sua família?</label>
-      <label for="Frontend">Frontend
-        <input type="radio" name="family" value="Frontend" id="Frontend">
-      </label>
-      <label for="Backend">Backend
-        <input type="radio" name="family" value="Backend" id="Backend">
-      </label>
-      <label for="FullStack">FullStack
-        <input type="radio" name="family" value="FullStack" id="FullStack">
-      </label>
+      <section id="section-three">
+        <div id="family-container">
+          <label for="" id="label-family">Qual sua família?</label>
+          <label for="Frontend">
+            <input type="radio" name="family" value="Frontend" id="Frontend">Frontend
+          </label>
+          <label for="Backend">
+            <input type="radio" name="family" value="Backend" id="Backend">Backend
+          </label>
+          <label for="FullStack">
+            <input type="radio" name="family" value="FullStack" id="FullStack">FullStack
+          </label>
+        </div>
 
+        <div id="toLearn">
+          <label for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+          <label for="hoFs">
+            <input type="checkbox" name="HoFs" value="HoFs" id="hoFs" class="subject"> HoFs
+          </label>
+          <label for="jest">
+            <input type="checkbox" name="Jest" value="Jest" id="jest" class="subject"> Jest
+          </label>
+          <label for="promises">
+            <input type="checkbox" name="Promises" value="Promises" id="promises" class="subject"> Promises
+          </label>
+          <label for="react">
+            <input type="checkbox" name="React" value="React" id="react" class="subject"> React
+          </label>
+          <label for="sql">
+            <input type="checkbox" name="SQL" value="SQL" id="sql" class="subject"> SQL
+          </label>
+          <label for="python">
+            <input type="checkbox" name="Python" value="Python" id="python" class="subject"> Python
+          </label>
+        </div>
+      </section>
+      
       <label for="input-email">Email: </label>
       <input type="email" placeholder="Email" name="userEmail" id="input-email">
 
