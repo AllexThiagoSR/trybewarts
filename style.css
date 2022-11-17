@@ -34,6 +34,7 @@
 }
 
 #evaluation-form {
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   margin: 1%;
@@ -46,24 +47,39 @@
 
 #input-name {
   margin: 1%;
+  width: 45%;
 }
 
 #input-lastname {
   margin: 1%;
+  width: 45%
 }
 
 #input-email {
   margin: 1%;
+  width: 45%
 }
 
 #house {
   margin: 1%;
 }
 
-#label-family {
-  margin-top: 2%;
+#section-three {
+  display: flex;
+  align-items: center;
 }
 
-#FullStack {
-  margin-bottom: 2%;
+#family-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 2%;
+}
+
+#toLearn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 2%;
 }
