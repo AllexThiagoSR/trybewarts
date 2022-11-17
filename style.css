@@ -130,3 +130,10 @@
   top: 65px;
   left: 235px;
 }
+
+#section-five {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1%;
+}
