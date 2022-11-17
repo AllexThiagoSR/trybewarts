@@ -4,8 +4,8 @@ const validate = (email, password) => {
   const emailInput = document.getElementById('email-input');
   const passwordInput = document.getElementById('password-input');
 
-  if (email=== emailInput.value && password === passwordInput.value) {
-    alert('Olá, Tryber!')
+  if (email === emailInput.value && password === passwordInput.value) {
+    alert('Olá, Tryber!');
     emailInput.value = '';
     passwordInput.value = '';
   } else {

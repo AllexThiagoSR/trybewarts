@@ -6,11 +6,11 @@
   display: flex;
 }
 
-form.flex-container {
+.flex-container form {
   justify-content: space-around;
   align-items: center;
 }
 
-header.flex-container {
+.flex-container header {
   justify-content: space-between;
 }
