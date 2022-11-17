@@ -1,5 +1,10 @@
+* {
+  margin: 0;
+}
+
 .header {
   background-color: rgb(50, 167, 145);
+  padding: 0 20px;
 }
 
 .flex-container {
@@ -7,10 +12,15 @@
 }
 
 .trybewarts-login.flex-container {
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
 }
 
 .header.flex-container {
   justify-content: space-between;
+  align-items: center;
+}
+
+.trybewarts-header-logo {
+  width: 90px;
 }
