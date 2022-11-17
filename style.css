@@ -120,3 +120,13 @@
   justify-content: space-between;
   width: 100%;
 }
+
+#text-and-counter {
+  position: relative;
+}
+
+#text-and-counter span {
+  position: absolute;
+  top: 65px;
+  left: 235px;
+}
