@@ -1,5 +1,6 @@
 const loginButton = document.getElementById('login');
 const submitBtn = document.getElementById('submit-btn');
+const agreementTerms = document.getElementById('agreement');
 
 const validate = (email, password) => {
   const emailInput = document.getElementById('email-input');
@@ -14,6 +15,14 @@ const validate = (email, password) => {
   }
 };
 
+const checkTerms = () => {
+  if (agreementTerms.checked === true) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
+};
+
 loginButton.addEventListener('click', (event) => {
   event.preventDefault();
   validate('tryber@teste.com', '123456');
@@ -21,4 +30,9 @@ loginButton.addEventListener('click', (event) => {
 
 submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
+  console.log([submitBtn]);
 });
+
+agreementTerms.addEventListener('change', checkTerms);
+
+checkTerms();
