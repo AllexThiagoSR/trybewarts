@@ -114,7 +114,7 @@
   width: 98%;
 }
 
-#evaluationLabel {
+#label-rate {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
