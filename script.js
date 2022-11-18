@@ -29,14 +29,60 @@ const countCharacters = () => {
   spanCounter.innerText = textArea.maxLength - textArea.value.length;
 };
 
-loginButton.addEventListener('click', (event) => {
+const getCheckedInputValue = (selector) => {
+  const inputs = document.querySelectorAll(selector);
+
+  for (let i = 0; i < inputs.length; i += 1) {
+    if (inputs[i].type === 'radio' && inputs[i].checked) {
+      return inputs[i].value;
+    }
+  }
+};
+
+const getCheckedValues = (selector) => {
+  const inputs = document.querySelectorAll(selector);
+  let strinToReturn = '';
+
+  for (let i = 0; i < inputs.length; i += 1) {
+    if (inputs[i].checked && inputs[i].type === 'checkbox') {
+      strinToReturn += ' ' + inputs[i].value + ',';
+    }
+  }
+  return strinToReturn.substring(0, strinToReturn.length - 1);
+};
+
+const addChild = (tag, parent, ...strings) => {
+  // console.log(tag, parent, strings);
+  for (let i = 0; i < strings.length; i += 1) {
+    const p = document.createElement(tag);
+    p.innerText = strings[i];
+    parent.appendChild(p);
+  }
+};
+
+const elementToReplace = (event) => {
   event.preventDefault();
+  const formData = document.getElementById('form-data');
+  const firstName = document.getElementById('input-name').value;
+  const lastName = document.getElementById('input-lastname').value;
+  const fullName = 'Nome: ' + firstName + ' ' + lastName;
+  const email = 'Email: ' + document.getElementById('input-email').value;
+  const house = 'Casa: ' + document.getElementById('house').value;
+  const family = 'Família: ' + getCheckedInputValue('#family-container label input');
+  const learn = 'Matérias:' + getCheckedValues('#toLearn label input');
+  const rate = 'Avaliação: ' + getCheckedInputValue('#label-rate input');
+  const textArea = 'Observações: ' + document.getElementById('textarea').value;
+
+  formData.innerHTML = '';
+  addChild('p', formData, fullName, email, house, family, learn, rate, textArea);
+};
+
+loginButton.addEventListener('click', () => {
+  // event.preventDefault();
   validate('tryber@teste.com', '123456');
 });
 
-submitBtn.addEventListener('click', (event) => {
-  event.preventDefault();
-});
+submitBtn.addEventListener('click', elementToReplace);
 
 agreementTerms.addEventListener('change', checkTerms);
 
