@@ -25,17 +25,8 @@ const checkTerms = () => {
   }
 };
 
-const countCharacters = (event) => {
-  const keyPressed = event.key.toLowerCase();
-  const acceptKeys = 'abcdefghijklmnopqrstuvwxyz1234567890.,:;!? ';
-  let count = Number(spanCounter.innerText);
-
-  if (keyPressed === 'backspace' && count < 500 && textArea.value !== '') {
-    count += 1;
-  } else if (keyPressed !== 'backspace' && acceptKeys.includes(keyPressed)) {
-    count -= 1;
-  }
-  spanCounter.innerText = String(count);
+const countCharacters = () => {
+  spanCounter.innerText = textArea.maxLength - textArea.value.length;
 };
 
 loginButton.addEventListener('click', (event) => {
@@ -48,6 +39,8 @@ submitBtn.addEventListener('click', (event) => {
 });
 
 agreementTerms.addEventListener('change', checkTerms);
+
+textArea.addEventListener('keyup', countCharacters);
 
 textArea.addEventListener('keydown', countCharacters);
 
