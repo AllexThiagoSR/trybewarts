@@ -73,6 +73,7 @@ const elementToReplace = (event) => {
   const rate = 'Avaliação: ' + getCheckedInputValue('#label-rate input');
   const textArea = 'Observações: ' + document.getElementById('textarea').value;
 
+  formData.style.display = 'flex';
   formData.innerHTML = '';
   addChild('p', formData, fullName, email, house, family, learn, rate, textArea);
 };
@@ -82,7 +83,11 @@ loginButton.addEventListener('click', () => {
   validate('tryber@teste.com', '123456');
 });
 
-submitBtn.addEventListener('click', elementToReplace);
+submitBtn.addEventListener('click', (event) => {
+  const formEvaluation = document.getElementById('evaluation-form');
+  formEvaluation.style.display = 'none';
+  elementToReplace(event);
+});
 
 agreementTerms.addEventListener('change', checkTerms);
 

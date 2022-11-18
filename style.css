@@ -146,3 +146,12 @@
 #text-area-counter textarea {
   width: 100%;
 }
+
+#form-data {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 30px;
+  padding: 5% 0 0 10%;
+  width: 50%;
+}
