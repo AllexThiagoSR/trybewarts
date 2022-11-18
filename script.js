@@ -27,7 +27,7 @@ const checkTerms = () => {
 
 const countCharacters = (event) => {
   const keyPressed = event.key.toLowerCase();
-  const acceptKeys = 'abcdefghijklmnopqrstuvwxyz1234567890';
+  const acceptKeys = 'abcdefghijklmnopqrstuvwxyz1234567890.,:;!? ';
   let count = Number(spanCounter.innerText);
 
   if (keyPressed === 'backspace' && count < 500 && textArea.value !== '') {
