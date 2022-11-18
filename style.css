@@ -120,9 +120,29 @@
   width: 98%;
 }
 
+#text-area-counter {
+  display: flex;
+  flex-direction: column;
+}
+
+#counter {
+  display: flex;
+  align-self: flex-end;
+  width: fit-content;
+}
+
 #section-five {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 1%;
+}
+
+#section-five #text-area-counter {
+  position: relative;
+  width: 80%;
+}
+
+#text-area-counter textarea {
+  width: 100%;
 }

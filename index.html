@@ -95,15 +95,19 @@
 
       <section id="section-five">
         <label for="" class="textarea">Deixe seu comentário:</label>
-        <textarea name="" id="" cols="70" rows="10" maxlength="500"></textarea>
+        <div id="text-area-counter">
+          <textarea name="" id="textarea" cols="70" rows="5" maxlength="500"></textarea>
+          <span id="counter">500</span>
+        </div>
       </section>
 
-      <div id="agreement-term">
+      <section id="agreement-term">
         <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
-      <input type="checkbox" id="agreement">
-      </div>
+        <input type="checkbox" id="agreement">
+      </section>
       <button type="submit" id="submit-btn">Enviar</button>
     </form>
+
     <aside>
       <img src="images/trybewarts-colored.svg" alt="Logo Trybewarts colorida" id="trybewarts-forms-logo">
     </aside>
