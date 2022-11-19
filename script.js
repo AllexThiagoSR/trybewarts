@@ -51,17 +51,38 @@ const getCheckedValues = (selector) => {
   return strinToReturn.substring(0, strinToReturn.length - 1);
 };
 
-const addChild = (tag, parent, ...strings) => {
-  // console.log(tag, parent, strings);
-  for (let i = 0; i < strings.length; i += 1) {
-    const p = document.createElement(tag);
-    p.innerText = strings[i];
-    parent.appendChild(p);
+const validadeInput = (inputValue) => {
+  const campo = inputValue.split(':')[0];
+  const value = inputValue.split(':')[1];
+  const hasLetters = value.match(/[a-z]|[1-9]/gi);
+
+  console.log(hasLetters);
+  if (hasLetters === null || value === ' undefined') {
+    console.log(campo, value);
+    return [false, campo];
   }
+  return [true];
 };
 
-const elementToReplace = (event) => {
-  event.preventDefault();
+const addChild = (tag, parent, ...strings) => {
+  const formEvaluation = document.getElementById('evaluation-form');
+  
+  for (let i = 0; i < strings.length; i += 1) {
+    const validation = validadeInput(strings[i])
+    if (!validation[0]) {
+      alert(`O campo de ${validation[1]} não foi preenchido!`);
+      return;
+    } else {
+      const p = document.createElement(tag);
+      p.innerText = strings[i];
+      parent.appendChild(p);
+    }
+  }
+  parent.style.setProperty('display', 'flex');
+  formEvaluation.style.display = 'none';
+};
+
+const elementToReplace = () => {
   const formData = document.getElementById('form-data');
   const firstName = document.getElementById('input-name').value;
   const lastName = document.getElementById('input-lastname').value;
@@ -73,7 +94,6 @@ const elementToReplace = (event) => {
   const rate = 'Avaliação: ' + getCheckedInputValue('#label-rate input');
   const textArea = 'Observações: ' + document.getElementById('textarea').value;
 
-  formData.style.display = 'flex';
   formData.innerHTML = '';
   addChild('p', formData, fullName, email, house, family, learn, rate, textArea);
 };
@@ -84,9 +104,8 @@ loginButton.addEventListener('click', () => {
 });
 
 submitBtn.addEventListener('click', (event) => {
-  const formEvaluation = document.getElementById('evaluation-form');
-  formEvaluation.style.display = 'none';
-  elementToReplace(event);
+  event.preventDefault();
+  elementToReplace();
 });
 
 agreementTerms.addEventListener('change', checkTerms);
