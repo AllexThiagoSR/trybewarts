@@ -45,7 +45,7 @@ const getCheckedValues = (selector) => {
 
   for (let i = 0; i < inputs.length; i += 1) {
     if (inputs[i].checked && inputs[i].type === 'checkbox') {
-      strinToReturn += ' ' + inputs[i].value + ',';
+      strinToReturn += ` ${inputs[i].value},`;
     }
   }
   return strinToReturn.substring(0, strinToReturn.length - 1);
@@ -56,7 +56,6 @@ const validadeInput = (inputValue) => {
   const value = inputValue.split(':')[1];
   const hasLetters = value.match(/[a-z]|[1-9]/gi);
 
-  console.log(hasLetters);
   if (hasLetters === null || value === ' undefined') {
     console.log(campo, value);
     return [false, campo];
@@ -66,17 +65,16 @@ const validadeInput = (inputValue) => {
 
 const addChild = (tag, parent, ...strings) => {
   const formEvaluation = document.getElementById('evaluation-form');
-  
+
   for (let i = 0; i < strings.length; i += 1) {
-    const validation = validadeInput(strings[i])
+    const validation = validadeInput(strings[i]);
     if (!validation[0]) {
       alert(`O campo de ${validation[1]} não foi preenchido!`);
       return;
-    } else {
-      const p = document.createElement(tag);
-      p.innerText = strings[i];
-      parent.appendChild(p);
     }
+    const p = document.createElement(tag);
+    p.innerText = strings[i];
+    parent.appendChild(p);
   }
   parent.style.setProperty('display', 'flex');
   formEvaluation.style.display = 'none';
@@ -86,20 +84,19 @@ const elementToReplace = () => {
   const formData = document.getElementById('form-data');
   const firstName = document.getElementById('input-name').value;
   const lastName = document.getElementById('input-lastname').value;
-  const fullName = 'Nome: ' + firstName + ' ' + lastName;
-  const email = 'Email: ' + document.getElementById('input-email').value;
-  const house = 'Casa: ' + document.getElementById('house').value;
-  const family = 'Família: ' + getCheckedInputValue('#family-container label input');
-  const learn = 'Matérias:' + getCheckedValues('#toLearn label input');
-  const rate = 'Avaliação: ' + getCheckedInputValue('#label-rate input');
-  const textArea = 'Observações: ' + document.getElementById('textarea').value;
+  const fullName = `Nome: ${firstName} ${lastName}`;
+  const email = `Email: ${document.getElementById('input-email').value}`;
+  const house = `Casa: ${document.getElementById('house').value}`;
+  const family = `Família: ${getCheckedInputValue('#family-container label input')}`;
+  const learn = `Matérias:${getCheckedValues('#toLearn label input')}`;
+  const rate = `Avaliação: ${getCheckedInputValue('#label-rate input')}`;
+  const textAreaValue = `Observações: ${document.getElementById('textarea').value}`;
 
   formData.innerHTML = '';
-  addChild('p', formData, fullName, email, house, family, learn, rate, textArea);
+  addChild('p', formData, fullName, email, house, family, learn, rate, textAreaValue);
 };
 
 loginButton.addEventListener('click', () => {
-  // event.preventDefault();
   validate('tryber@teste.com', '123456');
 });
 
