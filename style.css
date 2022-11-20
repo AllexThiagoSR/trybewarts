@@ -78,8 +78,13 @@
 
 #houseContainer {
   display: flex;
+  flex-direction: row;
   margin: 1%;
   width: 48%;
+}
+
+div label {
+  display: flex;
 }
 
 #section-three {
@@ -100,16 +105,11 @@
 
 #toLearn {
   display: flex;
-  flex-flow: row;
-  width: 60%;
-  margin: 1%;
-}
-
-#label-content {
-  display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
   margin: 1%;
+  width: 85%;
 }
 
 #section-four {
