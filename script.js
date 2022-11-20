@@ -25,29 +25,89 @@ const checkTerms = () => {
   }
 };
 
-const countCharacters = (event) => {
-  const keyPressed = event.key.toLowerCase();
-  const acceptKeys = 'abcdefghijklmnopqrstuvwxyz1234567890.,:;!? ';
-  let count = Number(spanCounter.innerText);
-
-  if (keyPressed === 'backspace' && count < 500 && textArea.value !== '') {
-    count += 1;
-  } else if (keyPressed !== 'backspace' && acceptKeys.includes(keyPressed)) {
-    count -= 1;
-  }
-  spanCounter.innerText = String(count);
+const countCharacters = () => {
+  spanCounter.innerText = textArea.maxLength - textArea.value.length;
 };
 
-loginButton.addEventListener('click', (event) => {
-  event.preventDefault();
+const getCheckedInputValue = (selector) => {
+  const inputs = document.querySelectorAll(selector);
+
+  for (let i = 0; i < inputs.length; i += 1) {
+    if (inputs[i].type === 'radio' && inputs[i].checked) {
+      return inputs[i].value;
+    }
+  }
+};
+
+const getCheckedValues = (selector) => {
+  const inputs = document.querySelectorAll(selector);
+  let strinToReturn = '';
+
+  for (let i = 0; i < inputs.length; i += 1) {
+    if (inputs[i].checked && inputs[i].type === 'checkbox') {
+      strinToReturn += ` ${inputs[i].value},`;
+    }
+  }
+  return strinToReturn.substring(0, strinToReturn.length - 1);
+};
+
+const validadeInput = (inputValue) => {
+  const campo = inputValue.split(':')[0];
+  const value = inputValue.split(':')[1];
+  const hasLetters = value.match(/[a-z]|[1-9]/gi);
+
+  if (hasLetters === null || value === ' undefined') {
+    console.log(campo, value);
+    return [false, campo];
+  }
+  return [true];
+};
+
+const addChild = (tag, parent, ...strings) => {
+  const formEvaluation = document.getElementById('evaluation-form');
+
+  for (let i = 0; i < strings.length; i += 1) {
+    const validation = validadeInput(strings[i]);
+    if (!validation[0]) {
+      alert(`O campo de ${validation[1]} não foi preenchido!`);
+      return;
+    }
+    const p = document.createElement(tag);
+    p.innerText = strings[i];
+    parent.appendChild(p);
+  }
+  parent.style.setProperty('display', 'flex');
+  formEvaluation.style.display = 'none';
+};
+
+const elementToReplace = () => {
+  const formData = document.getElementById('form-data');
+  const firstName = document.getElementById('input-name').value;
+  const lastName = document.getElementById('input-lastname').value;
+  const fullName = `Nome: ${firstName} ${lastName}`;
+  const email = `Email: ${document.getElementById('input-email').value}`;
+  const house = `Casa: ${document.getElementById('house').value}`;
+  const family = `Família: ${getCheckedInputValue('#family-container label input')}`;
+  const learn = `Matérias:${getCheckedValues('#toLearn label input')}`;
+  const rate = `Avaliação: ${getCheckedInputValue('#label-rate input')}`;
+  const textAreaValue = `Observações: ${document.getElementById('textarea').value}`;
+
+  formData.innerHTML = '';
+  addChild('p', formData, fullName, email, house, family, learn, rate, textAreaValue);
+};
+
+loginButton.addEventListener('click', () => {
   validate('tryber@teste.com', '123456');
 });
 
 submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
+  elementToReplace();
 });
 
 agreementTerms.addEventListener('change', checkTerms);
+
+textArea.addEventListener('keyup', countCharacters);
 
 textArea.addEventListener('keydown', countCharacters);
 
