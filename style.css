@@ -34,7 +34,6 @@
 }
 
 #evaluation-form {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   margin: 1%;
@@ -84,12 +83,12 @@
 }
 
 #section-three {
-  border-top: solid rgb(211, 206, 206) 2px;
-  border-bottom: solid rgb(211, 206, 206) 2px;
+  border-top: solid rgba(211, 206, 206, 0.329) 2px;
+  border-bottom: solid rgb(211, 206, 206, 0.329) 2px;
   display: flex;
   align-items: flex-start;
   padding: 5%;
-  margin: 5%;
+  margin: 2%;
 }
 
 #family-container {
@@ -101,8 +100,15 @@
 
 #toLearn {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   width: 60%;
+  margin: 1%;
+}
+
+#label-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   margin: 1%;
 }
 
@@ -155,7 +161,3 @@
   padding: 5% 0 0 10%;
   width: 50%;
 }
-
-/* #submit-btn {
-  width: 80px;
-} */
