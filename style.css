@@ -31,8 +31,12 @@
 
 #ft {
   justify-content: center;
-  background-color: #6F7275;
+  background-color: rgb(111, 114, 117);
   color: white;
+}
+
+.trybewarts-login.flex-container * {
+  margin: 2px;
 }
 
 #ft * {
@@ -42,6 +46,7 @@
 #main-container {
   display: flex;
   margin: 1%;
+  justify-content: space-around;
 }
 
 #evaluation-form {
@@ -173,14 +178,6 @@ div label {
   width: 50%;
 }
 
-label.flex-container {
+#house-label {
   align-items: center;
-}
-
-form.flex-container * {
-  margin: 2px;
-}
-
-#main-container {
-  justify-content: space-around;
 }
