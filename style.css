@@ -13,6 +13,7 @@
 
 .trybewarts-login.flex-container {
   align-items: center;
+  width: 33%;
 }
 
 .header.flex-container {
@@ -24,8 +25,18 @@
   width: 90px;
 }
 
+#trybewarts-header-title {
+  color: white;
+}
+
 #ft {
   justify-content: center;
+  background-color: #6F7275;
+  color: white;
+}
+
+#ft * {
+  margin: 20px;
 }
 
 #main-container {
@@ -160,4 +171,16 @@ div label {
   font-size: 30px;
   padding: 5% 0 0 10%;
   width: 50%;
+}
+
+label.flex-container {
+  align-items: center;
+}
+
+form.flex-container * {
+ margin: 2px;
+}
+
+main.flex-container {
+  justify-content: space-around;
 }
