@@ -2,6 +2,14 @@
   margin: 0;
 }
 
+body {
+  background-image: url(https://st3.depositphotos.com/1006374/18077/i/450/depositphotos_180777330-stock-photo-hogwarts-castle.jpg);
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(20px);
+  color: white;
+}
+
 .header {
   background-color: rgb(50, 167, 145);
   padding: 0 20px;
