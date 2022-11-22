@@ -2,95 +2,91 @@
   margin: 0;
 }
 
-* {
-  margin: 0;
-}
-  
 .header {
   background-color: rgb(50, 167, 145);
   padding: 0 20px;
 }
-  
+
 .flex-container {
   display: flex;
 }
-  
+
 .trybewarts-login.flex-container {
   align-items: center;
 }
-  
+
 .header.flex-container {
   justify-content: space-between;
   align-items: center;
 }
-  
+
 .trybewarts-header-logo {
   width: 90px;
 }
-  
+
 #ft {
   justify-content: center;
 }
-  
+
 #main-container {
   display: flex;
   margin: 1%;
 }
-  
+
 #evaluation-form {
   display: flex;
   flex-direction: column;
   margin: 1%;
   width: 675px;
 }
-  
+
 #trybewarts-forms-logo {
   height: 500px;
 }
-  
+
 #section-one {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 98%;
 }
-  
+
 #input-name {
   display: flex;
   margin: 1%;
   width: 48%;
 }
-  
+
 #input-lastname {
   display: flex;
   margin: 1%;
   width: 48%;
 }
-  
+
 #section-two {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 98%;
 }
- 
+
 #input-email {
   display: flex;
   margin: 1%;
   width: 48%;
 }
-  
+
 #houseContainer {
   display: flex;
   flex-direction: row;
   margin: 1%;
   width: 48%;
 }
-  
+
 div label {
   display: flex;
 }
-  
+
 #section-three {
   border-top: solid rgba(211, 206, 206, 0.329) 2px;
   border-bottom: solid rgb(211, 206, 206, 0.329) 2px;
@@ -99,14 +95,14 @@ div label {
   padding: 5%;
   margin: 2%;
 }
-  
+
 #family-container {
   display: flex;
   flex-direction: column;
   width: 40%;
   margin: 1%;
 }
-  
+
 #toLearn {
   display: flex;
   flex-flow: row wrap;
@@ -115,48 +111,48 @@ div label {
   margin: 1%;
   width: 85%;
 }
-  
+
 #section-four {
   display: flex;
   justify-content: center;
   margin: 1%;
   width: 98%;
 }
-  
+
 #label-rate {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 98%;
 }
-  
+
 #text-area-counter {
   display: flex;
   flex-direction: column;
 }
-  
+
 #counter {
   display: flex;
   align-self: flex-end;
   width: fit-content;
 }
-  
+
 #section-five {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 1%;
 }
-  
+
 #section-five #text-area-counter {
   position: relative;
   width: 80%;
 }
-  
+
 #text-area-counter textarea {
   width: 100%;
 }
-  
+
 #form-data {
   display: none;
   flex-direction: column;
