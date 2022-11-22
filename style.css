@@ -178,9 +178,9 @@ label.flex-container {
 }
 
 form.flex-container * {
- margin: 2px;
+  margin: 2px;
 }
 
-main.flex-container {
+#main-container {
   justify-content: space-around;
 }
